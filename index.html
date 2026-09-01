@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ngebensin by Ananda Ibrahim</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Ngebensin membantu melacak pengeluaran bensin, total liter, SPBU favorit, dan riwayat pengisian Anda secara simpel dan modern.">
+  <meta name="keywords" content="ngebensin, catat bensin, pengeluaran bensin, hemat bahan bakar, aplikasi android bensin">
+  <meta name="author" content="Ananda Ibrahim, Ananda Ibrahim Hilal Syafrudin, Baim Hilal, baimhilal,">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="picture/ngebensin-logo.png">
+  
+  <!-- General Sans Font from Fontshare -->
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="logo">
+        <img src="picture/ngebensin-logo.png" alt="Ngebensin Logo" class="logo-img">
+        <span class="logo-text">Ngebensin</span>
+      </a>
+      
+      <nav class="nav">
+        <a href="#fitur" class="nav-link" data-translate="nav-features">Fitur</a>
+        <a href="#tampilan" class="nav-link" data-translate="nav-preview">Tampilan</a>
+      </nav>
+      
+      <div class="lang-selector">
+        <button class="lang-btn active" id="lang-id" aria-label="Bahasa Indonesia">ID</button>
+        <span class="lang-separator"></span>
+        <button class="lang-btn" id="lang-en" aria-label="English">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="badge-container reveal">
+          <span class="badge" data-translate="hero-badge">APLIKASI PENCATAT BENSIN</span>
+        </div>
+        
+        <h1 class="hero-title reveal" data-translate="hero-title">
+          Catat setiap kali kamu isi bensin.
+        </h1>
+        
+        <p class="hero-desc reveal" data-translate="hero-desc">
+          Ngebensin membantumu melacak pengeluaran bensin, total liter, SPBU favorit, sampai riwayat pengisian semua dalam satu aplikasi yang simpel dan modern.
+        </p>
+        
+        <div class="hero-buttons reveal">
+          <a href="picture/ngebensin v.1.2.apk" download="ngebensin-v1.2.apk" class="btn btn-primary">
+            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span data-translate="btn-download">Download Sekarang</span>
+          </a>
+        </div>
+        
+        </div>
+      
+      <div class="hero-visual reveal">
+        <div class="phone-visual-group">
+          <!-- Floating card 1: Total Pengeluaran -->
+          <div class="floating-card card-expense reveal-item">
+            <span class="floating-card-label" data-translate="card-expense-label">TOTAL PENGELUARAN</span>
+            <span class="floating-card-value" id="card-expense-val">Rp 80.400</span>
+          </div>
+          
+          <!-- Floating card 2: Total Liter -->
+          <div class="floating-card card-liters reveal-item">
+            <span class="floating-card-label" data-translate="card-liters-label">TOTAL LITER</span>
+            <span class="floating-card-value" id="card-liters-val">7.0 L</span>
+          </div>
+          
+          <!-- Smartphone Mockup -->
+          <div class="phone-mockup-wrapper">
+            <img src="picture/1.png" alt="Ngebensin Splash Screen Mockup" class="mockup-img-plain">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scroll-indicator reveal">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Preview Section (Dark Forest Green Background) -->
+  <section class="preview-section" id="tampilan">
+    <div class="container preview-container">
+
+      
+      <h2 class="section-title text-white reveal" data-translate="preview-title">
+        Clean & Intuitive Interface
+      </h2>
+      
+      <p class="section-desc text-gray reveal" data-translate="preview-desc">
+        Explore real screenshots of the app in action.
+      </p>
+      
+      <!-- Carousel -->
+      <div class="carousel-wrapper reveal">
+        <button class="carousel-btn carousel-btn-prev" aria-label="Previous slide">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        
+        <div class="carousel-viewport">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <img src="picture/1.png" alt="Screen 1" class="mockup-img-plain">
+            </div>
+            <div class="carousel-slide">
+              <img src="picture/2.png" alt="Screen 2" class="mockup-img-plain">
+            </div>
+            <div class="carousel-slide">
+              <img src="picture/3.png" alt="Screen 3" class="mockup-img-plain">
+            </div>
+            <div class="carousel-slide">
+              <img src="picture/4.png" alt="Screen 4" class="mockup-img-plain">
+            </div>
+            <div class="carousel-slide">
+              <img src="picture/5.png" alt="Screen 5" class="mockup-img-plain">
+            </div>
+            <div class="carousel-slide">
+              <img src="picture/6.png" alt="Screen 6" class="mockup-img-plain">
+            </div>
+            <div class="carousel-slide">
+              <img src="picture/7.png" alt="Screen 7" class="mockup-img-plain">
+            </div>
+            <div class="carousel-slide">
+              <img src="picture/8.png" alt="Screen 8" class="mockup-img-plain">
+            </div>
+            <div class="carousel-slide">
+              <img src="picture/9.png" alt="Screen 9" class="mockup-img-plain">
+            </div>
+          </div>
+        </div>
+        
+        <button class="carousel-btn carousel-btn-next" aria-label="Next slide">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+      
+      <!-- Dot Indicators -->
+      <div class="carousel-dots">
+        <button class="carousel-dot active" aria-label="Slide 1"></button>
+        <button class="carousel-dot" aria-label="Slide 2"></button>
+        <button class="carousel-dot" aria-label="Slide 3"></button>
+        <button class="carousel-dot" aria-label="Slide 4"></button>
+        <button class="carousel-dot" aria-label="Slide 5"></button>
+        <button class="carousel-dot" aria-label="Slide 6"></button>
+        <button class="carousel-dot" aria-label="Slide 7"></button>
+        <button class="carousel-dot" aria-label="Slide 8"></button>
+        <button class="carousel-dot" aria-label="Slide 9"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" id="fitur">
+    <div class="container">
+      
+      <h2 class="section-title text-center reveal" data-translate="features-title">
+        Everything you need, zero hassle.
+      </h2>
+      
+      <p class="section-desc text-center reveal" data-translate="features-desc">
+        Designed to be simple, so you focus on the ride not the bookkeeping.
+      </p>
+      
+      <div class="features-grid">
+        <!-- Card 1 -->
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrapper">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </div>
+          <h3 class="feature-card-title" data-translate="feature-1-title">Log a Fill-Up</h3>
+          <p class="feature-card-desc" data-translate="feature-1-desc">One tap to add a new record — price, liters, station, and date are saved automatically.</p>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrapper">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+            </svg>
+          </div>
+          <h3 class="feature-card-title" data-translate="feature-2-title">Total Spending & Liters</h3>
+          <p class="feature-card-desc" data-translate="feature-2-desc">Instantly know how much you've spent and how many liters you've filled since day one.</p>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrapper">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+          </div>
+          <h3 class="feature-card-title" data-translate="feature-3-title">Station & Fuel Stats</h3>
+          <p class="feature-card-desc" data-translate="feature-3-desc">See which stations you visit most and which fuel type you buy most often.</p>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrapper">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3 class="feature-card-title" data-translate="feature-4-title">Fill-Up History</h3>
+          <p class="feature-card-desc" data-translate="feature-4-desc">Every fill-up neatly recorded. Check back anytime, complete with all the details.</p>
+        </div>
+        
+        <!-- Card 5 -->
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrapper">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+              <circle cx="12" cy="18" r="1"></circle>
+              <path d="M9 6h6M9 10h6M9 14h6"></path>
+            </svg>
+          </div>
+          <h3 class="feature-card-title" data-translate="feature-5-title">Multi-Vehicle</h3>
+          <p class="feature-card-desc" data-translate="feature-5-desc">Got more than one bike or car? Keep separate records per vehicle with ease.</p>
+        </div>
+        
+        <!-- Card 6 -->
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrapper">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <h3 class="feature-card-title" data-translate="feature-6-title">Simple & Modern</h3>
+          <p class="feature-card-desc" data-translate="feature-6-desc">A clean interface with warm, easy-on-the-eyes colors — no confusing menus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA (Call to Action) Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card reveal">
+        <div class="cta-glow"></div>
+        <div class="cta-icon-wrapper">
+          <img src="picture/ngebensin-logo.png" alt="Ngebensin Icon Logo" class="cta-logo-img">
+        </div>
+        
+        <h2 class="cta-title" data-translate="cta-title">Ready to start logging your fuel?</h2>
+        <p class="cta-desc" data-translate="cta-desc">Download Ngebensin now and start saving from your very first fill-up.</p>
+        
+        <a href="picture/ngebensin v.1.2.apk" download="ngebensin-v1.2.apk" class="btn btn-cta">
+          <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span data-translate="cta-btn">Download for Android</span>
+        </a>
+        
+        <div class="cta-subtext" data-translate="cta-subtext">Free · Android APK</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-dev-badge">
+        <span data-translate="footer-dev-note">Aplikasi ini masih dalam tahap pengembangan. Kami sangat menerima dan mengapresiasi kritik serta saran kamu!</span>
+      </div>
+
+      <!-- Contact Links -->
+      <div class="footer-contacts">
+        <a href="mailto:anandaibrahimhs@gmail.com" class="footer-contact-link" aria-label="Email" target="_blank" rel="noopener noreferrer">
+          <svg class="footer-contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          <span>anandaibrahimhs@gmail.com</span>
+        </a>
+        <a href="https://www.instagram.com/foolstuck_/" class="footer-contact-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <svg class="footer-contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+          </svg>
+          <span>@foolstuck_</span>
+        </a>
+      </div>
+
+      <p class="copyright">&copy; <span id="current-year">2026</span> Ngebensin app. Made by Ananda Ibrahim.</p>
+    </div>
+  </footer>
+
+  <!-- Script JS -->
+  <script src="script.js"></script>
+</body>
+</html>
