@@ -39,7 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
       "cta-btn": "Unduh untuk Android",
       "cta-subtext": "Gratis · Android APK",
       "cta-status-pill": "File APK Terverifikasi Aman",
-      "footer-dev-note": "Aplikasi ini masih dalam tahap pengembangan. Aku sangat menerima dan mengapresiasi kritik serta saran kamu!"
+      "footer-dev-note": "Aplikasi ini masih dalam tahap pengembangan. Aku sangat menerima dan mengapresiasi kritik serta saran kamu!",
+      "stat-visitors": "Pengunjung",
+      "stat-downloads": "Download"
     },
     en: {
       "nav-features": "Features",
@@ -74,7 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
       "cta-desc": "Make tracking your fuel expenses easier!",
       "cta-subtext": "Free · Android APK",
       "cta-status-pill": "Verified Safe APK File",
-      "footer-dev-note": "This app is currently in active development. I warmly welcome your feedback, critiques, and suggestions!"
+      "footer-dev-note": "This app is currently in active development. I warmly welcome your feedback, critiques, and suggestions!",
+      "stat-visitors": "Visitors",
+      "stat-downloads": "Downloads"
     },
   };
 

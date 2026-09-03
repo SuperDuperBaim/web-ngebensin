@@ -1177,3 +1177,86 @@ h1, h2, h3, h4 {
     font-size: 0.9rem;
   }
 }
+
+/* ==========================================================================
+   Stats Bar — Live Visitor & Download Counter
+   ========================================================================== */
+
+.stats-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 1.5rem;
+  background: rgba(30, 53, 27, 0.06);
+  border: 1px solid rgba(30, 53, 27, 0.12);
+  border-radius: 100px;
+  padding: 0.55rem 1.25rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.stat-icon {
+  color: var(--primary-green);
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.stat-number {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  letter-spacing: -0.02em;
+  min-width: 1.5ch;
+  transition: all 0.4s ease;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 1.2rem;
+  background: rgba(30, 53, 27, 0.15);
+  margin: 0 1rem;
+  flex-shrink: 0;
+}
+
+/* Number pop animation when value updates */
+@keyframes statPop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.18); color: var(--primary-green); }
+  100% { transform: scale(1); }
+}
+
+.stat-number.updated {
+  animation: statPop 0.35s ease;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .stats-bar {
+    padding: 0.5rem 1rem;
+  }
+
+  .stat-number {
+    font-size: 0.875rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  .stat-divider {
+    margin: 0 0.75rem;
+  }
+}
