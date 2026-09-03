@@ -72,14 +72,15 @@
 
         <!-- Stats Bar: Live Visitor & Download Counter -->
         <div class="stats-bar reveal">
+          <div class="stats-live-dot"></div>
           <div class="stat-item">
-            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             <span class="stat-number" id="visitor-count">—</span>
             <span class="stat-label" data-translate="stat-visitors">Pengunjung</span>
           </div>
           <div class="stat-divider"></div>
           <div class="stat-item">
-            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             <span class="stat-number" id="download-count">—</span>
             <span class="stat-label" data-translate="stat-downloads">Download</span>
           </div>
@@ -364,14 +365,23 @@
       return n.toLocaleString('id-ID');
     }
 
+    function updateValue(el, newVal) {
+      if (!el) return;
+      const formatted = formatNumber(newVal);
+      if (el.textContent !== formatted) {
+        el.textContent = formatted;
+        el.classList.remove('updated');
+        void el.offsetWidth; // trigger reflow
+        el.classList.add('updated');
+      }
+    }
+
     // Listen for real-time updates from Firestore
     onSnapshot(statsRef, (snapshot) => {
       if (snapshot.exists()) {
         const data = snapshot.data();
-        const visitorEl = document.getElementById('visitor-count');
-        const downloadEl = document.getElementById('download-count');
-        if (visitorEl) visitorEl.textContent = formatNumber(data.visitors || 0);
-        if (downloadEl) downloadEl.textContent = formatNumber(data.downloads || 0);
+        updateValue(document.getElementById('visitor-count'), data.visitors || 0);
+        updateValue(document.getElementById('download-count'), data.downloads || 0);
       }
     });
 
